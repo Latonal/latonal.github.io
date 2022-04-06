@@ -34,26 +34,115 @@
                 <a href="./content/pdf/CV NICOLAS RESMI fr.pdf" target="_blank">Mon CV</a>
             </div>
 
-            <div class="input-skills-group">
-                <label for="rangevalue1">HTML</label>
-                <input class="input-skills" name="rangevalue1" type="range" value="100" min="0" max="100" oninput="rangevalue1.value=value" onload="rangevalue1.value=value" />
-                <output id="rangevalue1">100</input>
+            <div class="skills">
+                <div class="input-skills-group">
+                    <label for="rangevalue1">HTML5</label>
+                    <input class="input-skills" name="rangevalue1" type="range" value="100" min="0" max="100" oninput="rangevalue1.value=value" onload="rangevalue1.value=value" />
+                    <output id="rangevalue1">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue2">CSS3/SASS</label>
+                    <input class="input-skills" name="rangevalue2" type="range" value="100" min="0" max="100" oninput="rangevalue2.value=value" onload="rangevalue2.value=value" />
+                    <output id="rangevalue2">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue3">Javascript</label>
+                    <input class="input-skills" name="rangevalue3" type="range" value="95" min="0" max="100" oninput="rangevalue3.value=value" onload="rangevalue3.value=value" />
+                    <output id="rangevalue3">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue4">NodeJS</label>
+                    <input class="input-skills" name="rangevalue4" type="range" value="70" min="0" max="100" oninput="rangevalue4.value=value" onload="rangevalue4.value=value" />
+                    <output id="rangevalue4">70</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue5">PHP</label>
+                    <input class="input-skills" name="rangevalue5" type="range" value="95" min="0" max="100" oninput="rangevalue5.value=value" onload="rangevalue5.value=value" />
+                    <output id="rangevalue5">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue6">Wordpress</label>
+                    <input class="input-skills" name="rangevalue6" type="range" value="95" min="0" max="100" oninput="rangevalue6.value=value" onload="rangevalue6.value=value" />
+                    <output id="rangevalue6">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue7">MySQL</label>
+                    <input class="input-skills" name="rangevalue7" type="range" value="90" min="0" max="100" oninput="rangevalue7.value=value" onload="rangevalue7.value=value" />
+                    <output id="rangevalue7">90</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue8">PostgreSQL</label>
+                    <input class="input-skills" name="rangevalue8" type="range" value="95" min="0" max="100" oninput="rangevalue8.value=value" onload="rangevalue8.value=value" />
+                    <output id="rangevalue8">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue9">Git</label>
+                    <input class="input-skills" name="rangevalue9" type="range" value="100" min="0" max="100" oninput="rangevalue9.value=value" onload="rangevalue9.value=value" />
+                    <output id="rangevalue9">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue10">Unity/C#</label>
+                    <input class="input-skills" name="rangevalue10" type="range" value="80" min="0" max="100" oninput="rangevalue10.value=value" onload="rangevalue10value=value" />
+                    <output id="rangevalue10">80</input>
+                </div>
             </div>
             <p>*A lower percentage does not mean I do not know part of the language, it means I might have more struggles to do some stuff</p>
         </aside>
         <article>
+            <div class="about-me">
+                <div class="text-title">
+                    <div class="text-line"></div>
+                    <h3 id="title-projects">A propos</h3>
+                </div>
+                <p>Je suis un développeur web cherchant à se diversifier et s'améliorer dans tous les sujets touchant le développement.</p>
+                <span class="line-break"></span>
+                <p>Etant passionné de jeux vidéo, j'ai aussi appris le développement dans ce secteur et je souhaite pouvoir travailler dans ce domaine un jour.</p>
+                <span class="line-break"></span>
+                <p>Je suis aussi diplômé d'un BAC+5 à la Web School Factory depuis fin 2021, et ait aussi un diplôme de qualité Opquast depuis 2018.</p>
+                <span class="line-break"></span>
+                <p>Je suis actuellement en recherche de travail, n'hésitez pas à me contacter sur <a href="mailto:nresmi.pro@gmail.com">nresmi.pro@gmail.com</a>.</p>
+            </div>
+            <div class="text-title">
+                <div class="text-line"></div>
+                <h3 id="title-projects">Mes projets</h3>
+            </div>
+            <section class="project">
+                <div class="project-banner">
+                    <img src="./content/img/img1.png" id="project-favs">
+                    <p>Favs</p>
+                </div>
+                <div class="project-info">
+                    <div class="description">
+                        <p>Compétences nécessaires : HTML5, CSS3, Javascript, JSON formatting, Code management</p>
+                        <span class="line-break"></span>
+                        <p>Projet réalisé seul avec pour objectif de créer un site permettant de créer une page de référencement de lien personallisable entièrement.</p>
+                        <span class="line-break"></span>
+                        <p>Actuellement toujours en développement, la première version est déjà disponible. Un de mes objectifs était de réaliser un code léger et optimisé.</p>
+                        <span class="line-break"></span>
+                        <p>Il a été réalisé en HTML5, CSS3, Javascript vanilla (sans librairie externe). N'ayant aucun serveur, j'ai utilisé IndexedDB (intégré à Javascript) permettant d'avoir une base de données sauvegardant les informations dans le navigateur lui-même.</p>
+                    </div>
+                    <a href="Favs/index.html" class="goto" target="_blank">
+                        <div class="sp-ch">
+                            <p>&#57367;</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
             <section class="project">
                 <div class="project-banner">
                     <img src="./content/img/nacarat.png" id="project-1">
-                    <p>Banner and text</p>
+                    <p>Nacarat</p>
                 </div>
                 <div class="project-info">
-                    <img src="./content/img/natixis.png">
-                    <p class="description">
-                        texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte 
-                    </p>
-                    <a href="#" class="goto" target="_blank">
-                        <p class="sp-ch">&#57367;</p>
+                    <img src="./content/img/mki.svg" id="mki">
+                    <div class="description">
+                        <p>Compétences nécessaires : HTML5, CSS3, Javascript, PHP, MySQL, Déploiement en ligne, Code management</p>
+                        <p>texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte texte</p>
+                    </div>
+                    <a href="https://nacarat.com/" class="goto" target="_blank">
+                        <div class="sp-ch">
+                            <p>&#57367;</p>
+                        </div>
                     </a>
                 </div>
             </section>

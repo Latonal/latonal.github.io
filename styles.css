@@ -44,6 +44,14 @@ a {
     drop-shadow(2px 2px 0px #fff)
     drop-shadow(-2px 2px 0px #fff)
 }
+.space:before, .space:after {
+    display:inline;
+    content: "\00a0";
+}
+.line-break:after {
+    content:'\A';
+    white-space: pre;
+}
 
 body {
     background:var(--background-color);
@@ -159,6 +167,39 @@ main article {
     width:100%;
 }
 
+/* Stylizing */
+article .text-title {
+    position:relative;
+    height:20px;
+    margin-top:20px;
+}
+article .text-title .text-line {
+    width:100%;
+    border:1px solid #fff;
+    border-radius:50px;
+}
+article .text-title h3 {
+    position:absolute;
+    top:-10px;
+    left:20px;
+    background-color:var(--background-second-color);
+    padding:0 10px;
+}
+/* End Stylizing */
+
+/* About me */
+.about-me a {
+    color:var(--font-second-color);
+    transition: var(--transition-time);
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-decoration-thickness: 1px;
+}
+.about-me a:hover {
+    color:var(--font-color);
+}
+/* End of About me */
+
 /* Projects */
 /* Banner */
 article section.project {
@@ -191,16 +232,16 @@ article section.project .project-info {
 }
 article section.project .project-info img:first-child {
     position:absolute;
-    height:75px;
-    top:85px;
+    height:55px;
+    top:97px;
     left:10px;
     border:4px solid var(--background-third-color);
     border-radius:50px;
     padding:5px;
     background-color:#ebeced;
 }
-article section.project .project-info p.description {
-    margin: 50px 20px 20px 20px;
+article section.project .project-info .description {
+    margin: 40px 20px 20px 20px;
 }
 article section.project .project-info a.goto {
     background-color: #233142;
@@ -217,7 +258,7 @@ article section.project .project-info a.goto:hover {
     --var-color-1:var(--font-color);
     color:var(--var-color-1);
 }
-article section.project .project-info a.goto p {
+article section.project .project-info a.goto div {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -227,17 +268,30 @@ article section.project .project-info a.goto p {
     border-radius:50px;
     transition: var(--transition-time);
 }
+article section.project .project-info a.goto div p {
+    font-size:35px;
+    margin-top:-4.5px;
+    margin-left:4.5px;
+}
+#project-favs {
+    top: -200px;
+}
 #project-1 {
     top:-50px;
 }
+#mki {
+    background-color:#111;
+}
 /* End Banner */
-
 /* End Projects */
 
+/* Inputs */
 .input-skills-group {
     display:flex;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom:5px;
+    flex: 1 0 40%;
 }
 .input-skills-group input.input-skills,
 .input-skills-group input.input-skills ~ output {
@@ -252,11 +306,13 @@ article section.project .project-info a.goto p {
   padding: 5px 16px;
   border-radius: 3px;
   color: #fff;
+  min-width:58.7px;
+  text-align: center;
 }
 .input-skills-group input[type="range"].input-skills {
   -webkit-appearance: none;
   margin: 0 5px;
-  width: 150px;
+  width: 140px;
   height: 7px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
@@ -323,8 +379,39 @@ article section.project .project-info a.goto p {
   border: none;
   background: transparent;
 }
+/* End Inputs */
 
-
+/* Responsive */
+@media screen and (max-width:900px) {
+    header nav ul {
+        margin-right:20px;
+    }
+    main {
+        flex-wrap:wrap;
+        margin: 30px 22px 30px 10px;
+    }
+    main aside {
+        min-width: calc(100vw - 60px);
+    }
+    .input-skills-group {
+        justify-content: center;
+        width:300px;
+    }
+    .skills {
+        display:flex;
+        flex-wrap:wrap;
+    }
+    main aside>p {
+        max-width:initial;
+    }
+    article section.project {
+        margin:0 auto 50px auto;
+    }
+    #title-projects {
+        left:calc(50% - 124px / 2);
+    }
+}
+/* End Responsive */
 
 
 /************************* Animations *************************/

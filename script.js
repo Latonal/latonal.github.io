@@ -1,3 +1,33 @@
+document.documentElement.setAttribute('lang', navigator.language); // set language depending of navigator
+
+/** Set {animation} to play on {idElem} during {setTime}
+ * @param {HTMLElement} idElem id of the element
+ * @param {string} animation name of the animation, like "fade-in"/"fade-out"
+ * @param {number} setTime time of animation in ms, default 400 */
+function Fade(idElem, animation, setTime = 400) {
+  idElem.classList.add(animation);
+  setTimeout(() => {
+    idElem.classList.remove(animation);
+  }, setTime);
+}
+
+ChangeLanguage(navigator.language);
+function ChangeLanguage(lang) {
+  // Class
+  Object.keys(language["class"][lang]).forEach(e => {
+    let c = document.getElementsByClassName(e);
+    Array.from(c).forEach(element => {
+      element.innerHTML = language["class"][lang][e];
+    });
+  });
+  // Id
+  Object.keys(language["id"][lang]).forEach(e => {
+    if (document.getElementById(e)) {
+      document.getElementById(e).innerHTML = language["id"][lang][e];
+    }
+  });
+}
+
 //#region Input Range
 const rangeInputs = document.getElementsByClassName('input-skills');
 
@@ -5,11 +35,11 @@ function handleInputChange(e) {
   let target = e.target
   if (e.target.type !== 'range') {
     target = document.getElementById('range')
-  } 
+  }
   const min = target.min
   const max = target.max
   const val = target.value
-  
+
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
 }
 
@@ -19,36 +49,6 @@ Array.from(rangeInputs).forEach(input => {
 });
 //#endregion Input Range
 
-
-
-
-
-
-// /** Set {animation} to play on {idElem} during {setTime}
-//  * @param {HTMLElement} idElem id of the element
-//  * @param {string} animation name of the animation, like "fade-in"/"fade-out"
-//  * @param {number} setTime time of animation in ms, default 400 */
-//  function Fade(idElem, animation, setTime = 400) {
-//     idElem.classList.add(animation);
-//     setTimeout(() => {
-//         idElem.classList.remove(animation);
-//     }, setTime);
-// }
-
-// document.documentElement.setAttribute('lang', navigator.language); // set language depending of navigator
-
-// let coll = document.getElementsByClassName("collapsible");
-// for(let i = 0; i < coll.length; i++) { // https://www.w3schools.com/howto/howto_js_collapsible.asp
-//     coll[i].addEventListener("click", function() {
-//         this.classList.toggle("active");
-//         var content = this.nextElementSibling;
-//         if (content.style.maxWidth) {
-//             content.style.maxWidth = null;
-//         } else {
-//             content.style.maxWidth = "0px";
-//         }
-//     });
-// }
 
 // ChangeLanguage(navigator.language);
 // function ChangeLanguage(lang) {

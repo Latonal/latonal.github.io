@@ -9,186 +9,167 @@
 </head>
 
 <body>
-    <nav>
-        <span></span>
-        <div class="menu">
-            <a href="#top" id="top-ref">About me</a>
-            <a href="#projects" id="projects-ref">My projects</a>
-            <a href="#contact-me" id="contact-me-ref">Contact</a>
-        </div>
-        <div class="parameters" class="popin">
-            <button class="sp-ch popin" onclick="OpenPopin();">&#57621;</button>
-            <div id="parameters-popin" class="popin">
-                <p onclick="ChangeLanguage('fr');" id="fr">French</p>
-                <p onclick="ChangeLanguage('en');" id="en">English</p>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">A propos</a>
+                </li>
+                <li>
+                    <a href="#my-projects">Mes projets</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    
-    
-    <div class="layout background" id="top">
-        <header>
-            <h1>
-                <span>Nicolas</span>
-                <span>Resmi</span>
-            </h1>
-            <h2 id="title">Développeur full stack</h2>
-        </header>
-        <main>
-            <section>
-                <article id="art1">
-                    <h2>About me</h2>
-                    <div class='group'>
-                        <div>
-                            <p>Web developer seeking to diversify on different subjects, both in development and in other related projects.</p>
-                            <p>Graduated with a Master's degree in 2021, I already had to work with Natixis, Asmodee and RATP, among others.</p>
-                            <p>My school had the advantage of introducing us to several areas of expertise outside of development and also allowing us to quickly familiarize ourselves with group work.</p>
-                        </div>
-                        <img src='content/img/RESMI_Nicolas.jpg' alt='Photo de Nicolas Resmi' class='photo'>
-                    </div>
-                    <div class='group' id='natixis'>
-                        <img src='content/img/natixis.png' class='outline' alt='logo de Natixis'>
-                        <div>
-                            <p>Collaborative agency with three other friends, our mission was to simplify the creation of sensitive reports by creating a secure platform internally to allow the various actors to submit their results.</p>
-                        </div>
-                    </div>
-                    <div class='group'>
-                        <img src='content/img/asmodee.png' alt='logo de Asmodee'>
-                        <div>
-                            <p>Project during which we had to organize playtests to collect players' feedbacks on current trends in the game and board game sector. We also participated in the alpha of a work in-progress project.</p>
-                        </div>
-                    </div>
-                    <div class='group'>
-                        <img src='content/img/ratp.svg' alt='logo de la RATP'>
-                        <div>
-                            <p>Project in which we had to imagine several services for RATP users, as well as to create functional prototypes, resulting in the creation of a site using an anonymized user database as well as RATP's APIs available online for the creation of our services and interactive maps.</p>
-                        </div>
-                    </div>
-                </article>
-                <article id="art2">
-                    <h2>My convictions</h2>
-                    <p>Every bits count, I try to optimize as much as my knowledge allows in order to make the user experience the best possible, and aim to always improve myself on this point.</p>
-                    <p>Accessibility is also an important point that is developing more and more and on which I aim to give more effort.</p>
-                    <p>I seek to diversify my talents, as much to learn more but also to understand everyone's needs and thus communicate better.</p>
-                </article>
-                <article id="art3">
-                    <h2>Languages I love</h2>
-                    <div class='group'>
-                        <img src='content/img/html5.svg' alt='html5 logo'>
-                        <img src='content/img/css.svg' alt='css logo'>
-                        <p>Impossible to miss for web development, although both seem simple on the surface, there is a lot to cover than just making a pretty page and SEO and optimization starts here.</p>
-                    </div>
-                    <div class='group'>
-                        <p>Both in vanilal or with frameworks or NodeJS, I am able to adapt to be able to respond to your requests.</p>
-                        <img src='content/img/js.svg' alt='javascript logo'>
-                    </div>
-                    <div class='group'>
-                        <img src='content/img/php.svg' alt='php logo'>
-                        <p>As a server language in vanilla, with Wordpress or anything else, PHP does not scare me.</p>
-                    </div>
-                    <div class='group'>
-                        <p>Passionate about video games, I aim to create my own projects and have already acquired a lot of knowledge in hope to achieve this.</p>
-                        <img src='content/img/csharp.svg' alt='c-sharp logo'>
-                        <img src='content/img/unity.svg' alt='unity logo' class='unity-logo outline'>
-                    </div>
-                    <div class='group' id='projects'>
-                        <p>+</p>
-                        <p>And much more to mee your needs, learning does not scare me and is also a skill. I already had to work on projects in Go, ASP.Net, Visual Basic, Basic, Python, and many other languages.</p>
-                    </div>
-                </article>
-                <article id="popup-readmore" hidden>
-                    <div class="close" onclick="SetPopupReadMore(false);"></div>
-                    <div class="popup-content">
-                        <p class="close sp-ch" onclick="SetPopupReadMore(false);">&#57508;</p>
-                        <h3>Read more.</h3>
-                        <div class="content-readmore">
-                            Read more.
-                        </div>
-                    </div>
-                </article>
-                <article id="art4">
-                    <h2 id="my-projects">Mes projets</h2>
-                    <div class="cards" id="cards">
-                        <div class="cardss">
-                            <button class="collapsible"><p id="ongoing-text">En cours</p></button>
-                            <div class="content" id="finished">
-                                <a href="Favs/index.html" class="card">
-                                    <img src='./content/img/img1.png' alt='Image of the code wrote'>
-                                    <h3>Favs</h3>
-                                    <div class='content'>
-                                        <p>Objective that I had already set myself when I was younger, a customizable homepage, currently still in development but the first version if already accessible with the most basic features available.</p>
-                                        <p>A project that seems simple but a very heavy code aimed at being optimized, both in terms of its length and on the side of your browser. My ambition was to make a light site in order to oppose the sites that were much too heavy even at their generation, which is today a standard that is far too present.</p>
-                                        <p>Made with HTML/CSS and vanilla Javascript (without library). For the database, I used IndexedDB which is a database saving the informations in your browser itself, so there is no cost on my side and close to no impact on yours given that the memory space required is negligible.</p>
-                                        <p>This first version was quite a big challenge, and much more is to come: page system, addition of customization of icons, facilitation to modify part of the CSS...</p>
-                                        <ul class='list-square'>
-                                            <li>Create a database architecture (JSON for local use) and manage its use based on user actions</li>
-                                            <li>Creation of a tool with the aim of making it evolve over time</li>
-                                            <li>Creation of the front and back architecture and their optimization following the functional development model pattern</li>
-                                        </ul>
-                                    </div>
-                                    <span>Read more...</span>
-                                </a>
-                            </div>
-                            <button class="collapsible"><p id="finished-text">Finis</p></button>
-                            <div class="content" id="favs">
-                                <a href="https://sepimo.fr/" class="card">
-                                    <img src='./content/img/sepimo.png' alt='Map that can be found on the website'>
-                                    <h3>Sepimo</h3>
-                                    <div class='content'>
-                                        <p>Sepimo is a site developed with Wordpress and an in-house CRM to provide a way to feed its content in another way for the client.</p>
-                                        <p>So I had to allow them to use both the CRM of WMKI and the Wordpress CMS in order to feed the site.</p>
-                                        <p>I was faced with the creation of an interactive map with the Google API, and the management of points of interest from various content source.</p>
-                                        <p>However, Google's API is not the only map available on the site, and I had to allow searching by region via a simpler map.</p>
-                                        <p>I also had to dynamize the articles available for each of these points of interest (and more), as well as the articles in the \"new\" section, and I helped repair some of the simulators available on the site.</p>
-                                        <ul class='list-square'>
-                                            <li>Development of a map with the Google API and placement of points of interest</li>
-                                            <li>Management of the link between the Wordpress back-office and a custom CRM to facilitate the creation of new pages</li>
-                                            <li>Creation of several page templates</li>
-                                            <li>Implementation and management of multiple Wordpress plugins</li>
-                                            <li>Update of several simulators developed in ASP.Net</li>
-                                        </ul>
-                                    </div>
-                                    <span>Read more...</span>
-                                </a>
-                                <a href="https://nacarat.com/" class="card">
-                                    <img src='./content/img/nacarat.png' alt='Home of the website Nacarat'>
-                                    <h3>Nacarat</h3>
-                                    <div class='content'>
-                                        <p>Happy with my results, MKI took me on as a freelancer to help on the development of a new project.</p>
-                                        <p>I had to help on the integration side and mainly helped to dynamize the site, always with the articles, and in particular with the glossary page.</p>
-                                        <ul class='list-square'>
-                                            <li>Management of content from the Wordpress back-office and with the custom CRM</li>
-                                            <li>Created functions to help the organization of pages when creating new content</li>
-                                            <li>Front and back code optimization</li>
-                                        </ul>
-                                    </div>
-                                    <span>Read more...</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <article id="contact-me">
-                    <h2>Contact me!</h2>
-                    <div class='group'>
-                        <div>
-                            <p>Want to simply say \"Hello\" or hire me? Do not hesitate to contact me!</p>
-                            <p>You can email me at my address: <a href='mailto:nresmi.pro@gmail.com'>nresmi.pro@gmail.com</a></p>
-                        </div>
-                    </div>
-                </article>
-            </section>
-        </main>
-        <footer hidden>
-            <p>Footer</p>
-        </footer>
     </div>
+    <main>
+        <aside>
+            <div class="photo">
+                <img src="./content/img/RESMI_Nicolas.jpg">
+            </div>
+            <h1>Nicolas Resmi</h1>
+            <h2>Développeur full-stack</h2>
+            <div class="align">
+                <a href="./content/pdf/CV NICOLAS RESMI fr.pdf" target="_blank">Mon CV</a>
+            </div>
+
+            <div class="skills">
+                <div class="input-skills-group">
+                    <label for="rangevalue1">HTML5</label>
+                    <input class="input-skills" name="rangevalue1" type="range" value="100" min="0" max="100" oninput="rangevalue1.value=value" onload="rangevalue1.value=value" />
+                    <output id="rangevalue1">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue2">CSS3/SASS</label>
+                    <input class="input-skills" name="rangevalue2" type="range" value="100" min="0" max="100" oninput="rangevalue2.value=value" onload="rangevalue2.value=value" />
+                    <output id="rangevalue2">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue3">Javascript</label>
+                    <input class="input-skills" name="rangevalue3" type="range" value="95" min="0" max="100" oninput="rangevalue3.value=value" onload="rangevalue3.value=value" />
+                    <output id="rangevalue3">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue4">NodeJS</label>
+                    <input class="input-skills" name="rangevalue4" type="range" value="70" min="0" max="100" oninput="rangevalue4.value=value" onload="rangevalue4.value=value" />
+                    <output id="rangevalue4">70</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue5">PHP</label>
+                    <input class="input-skills" name="rangevalue5" type="range" value="95" min="0" max="100" oninput="rangevalue5.value=value" onload="rangevalue5.value=value" />
+                    <output id="rangevalue5">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue6">Wordpress</label>
+                    <input class="input-skills" name="rangevalue6" type="range" value="95" min="0" max="100" oninput="rangevalue6.value=value" onload="rangevalue6.value=value" />
+                    <output id="rangevalue6">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue7">MySQL</label>
+                    <input class="input-skills" name="rangevalue7" type="range" value="90" min="0" max="100" oninput="rangevalue7.value=value" onload="rangevalue7.value=value" />
+                    <output id="rangevalue7">90</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue8">PostgreSQL</label>
+                    <input class="input-skills" name="rangevalue8" type="range" value="95" min="0" max="100" oninput="rangevalue8.value=value" onload="rangevalue8.value=value" />
+                    <output id="rangevalue8">95</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue9">Git</label>
+                    <input class="input-skills" name="rangevalue9" type="range" value="100" min="0" max="100" oninput="rangevalue9.value=value" onload="rangevalue9.value=value" />
+                    <output id="rangevalue9">100</input>
+                </div>
+                <div class="input-skills-group">
+                    <label for="rangevalue10">Unity/C#</label>
+                    <input class="input-skills" name="rangevalue10" type="range" value="80" min="0" max="100" oninput="rangevalue10.value=value" onload="rangevalue10value=value" />
+                    <output id="rangevalue10">80</input>
+                </div>
+            </div>
+            <p>Un plus petit pourcentage ne veut pas nécessaire dire que je ne connais pas des parties du langage, cela signifie que j'aurais plus de difficulté à produire le résultat attendu.</p>
+        </aside>
+        <article>
+            <div class="about-me">
+                <div class="text-title">
+                    <div class="text-line"></div>
+                    <h3 class="title-projects" id="about-me">A propos</h3>
+                </div>
+                <p>Je suis un développeur web cherchant à se diversifier et s'améliorer dans tous les sujets touchant le développement.</p>
+                <span class="line-break"></span>
+                <p>Etant passionné de jeux vidéo, j'ai aussi appris le développement dans ce secteur et je souhaite pouvoir travailler dans ce domaine un jour.</p>
+                <span class="line-break"></span>
+                <p>Je suis aussi diplômé d'un BAC+5 à la Web School Factory depuis fin 2021, et ait aussi un diplôme de qualité Opquast depuis 2018.</p>
+                <span class="line-break"></span>
+                <p>Je suis actuellement en recherche de travail, n'hésitez pas à me contacter sur <a href="mailto:nresmi.pro@gmail.com">nresmi.pro@gmail.com</a>.</p>
+            </div>
+            <div class="text-title">
+                <div class="text-line"></div>
+                <h3 class="title-projects" id="my-projects">Mes projets</h3>
+            </div>
+            <section class="project">
+                <div class="project-banner">
+                    <img src="./content/img/img1.png" id="project-favs" alt="Code">
+                    <p>Favs</p>
+                </div>
+                <div class="project-info">
+                    <div class="description">
+                        <p>Compétences nécessaires : HTML5, CSS3, Javascript, JSON formatting, Code management</p>
+                        <span class="line-break"></span>
+                        <p>Projet réalisé seul avec pour objectif de créer un site permettant de créer une page de référencement de lien personallisable entièrement.</p>
+                        <span class="line-break"></span>
+                        <p>Actuellement toujours en développement, la première version est déjà disponible. Un de mes objectifs était de réaliser un code léger et optimisé.</p>
+                        <span class="line-break"></span>
+                        <p>Il a été réalisé en HTML5, CSS3, Javascript vanilla (sans librairie externe). N'ayant aucun serveur, j'ai utilisé IndexedDB (intégré à Javascript) permettant d'avoir une base de données sauvegardant les informations dans le navigateur lui-même.</p>
+                    </div>
+                    <a href="Favs/index.html" class="goto" target="_blank">
+                        <div class="sp-ch">
+                            <p>&#57367;</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-banner">
+                    <img src="./content/img/nacarat.png" id="project-1" alt="Preview du site Nacarat">
+                    <p>Nacarat</p>
+                </div>
+                <div class="project-info">
+                    <img src="./content/img/mki.svg" id="mki" alt="Logo MKI">
+                    <div class="description">
+                        <p>Compétences nécessaires : HTML5, CSS3, Javascript, PHP, Wordpress, MySQL, Déploiement en ligne, Code management</p>
+                        <span class="line-break"></span>
+                        <p>Ayant déjà eu à travailler avec MKI, j'ai été pris en freelance afin d'aider au développement d'un nouveau projet.</p>
+                        <span class="line-break"></span>
+                        <p>J'ai eu à aider principalement la dynamisation du site mais ai aussi aidé le côté intégration.</p>
+                    </div>
+                    <a href="https://nacarat.com/" class="goto" target="_blank">
+                        <div class="sp-ch">
+                            <p>&#57367;</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            <section class="project">
+                <div class="project-banner">
+                    <img src="./content/img/img1.png" id="project-natixis"  alt="Code">
+                    <p>Natixis</p>
+                </div>
+                <div class="project-info">
+                    <img src="./content/img/natixis.png" alt="Logo Natixis">
+                    <div class="description">
+                        <p>Compétences nécessaires : HTML5, CSS3, Javascript, PostgreSQL, NodeJS, Déploiement en ligne, Code management</p>
+                        <span class="line-break"></span>
+                        <p>Agence collaborative avec trois camarades, notre mission était de créer une plateforme en interne afin de simplifier la transmission de données sensibles, formatter ces données pour les rendre plus lisibles, et créer une plateforme sécurisée pour diminuer la charge de travail répétitive.</p>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+    </footer>
     
-    <script type="text/javascript" src="content/js/language.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./content/js/language.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>

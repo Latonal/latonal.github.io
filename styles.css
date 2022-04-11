@@ -241,6 +241,9 @@ article section.project .project-info img:first-child {
     background-color:#ebeced;
 }
 article section.project .project-info .description {
+    margin: 20px;
+}
+article section.project .project-info img ~ .description {
     margin: 40px 20px 20px 20px;
 }
 article section.project .project-info a.goto {
@@ -273,7 +276,7 @@ article section.project .project-info a.goto div p {
     margin-top:-4.5px;
     margin-left:4.5px;
 }
-#project-favs {
+#project-favs, #project-natixis {
     top: -200px;
 }
 #project-1 {
@@ -407,7 +410,7 @@ article section.project .project-info a.goto div p {
     article section.project {
         margin:0 auto 50px auto;
     }
-    #title-projects {
+    .title-projects {
         left:calc(50% - 124px / 2);
     }
 }

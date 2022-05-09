@@ -14,18 +14,22 @@ function Fade(idElem, animation, setTime = 400) {
 ChangeLanguage(navigator.language);
 function ChangeLanguage(lang) {
   // Class
-  Object.keys(language["class"][lang]).forEach(e => {
-    let c = document.getElementsByClassName(e);
-    Array.from(c).forEach(element => {
-      element.innerHTML = language["class"][lang][e];
+  if (language["class"][lang]) {
+    Object.keys(language["class"][lang]).forEach(e => {
+      let c = document.getElementsByClassName(e);
+      Array.from(c).forEach(element => {
+        element.innerHTML = language["class"][lang][e];
+      });
     });
-  });
+  }
   // Id
-  Object.keys(language["id"][lang]).forEach(e => {
-    if (document.getElementById(e)) {
-      document.getElementById(e).innerHTML = language["id"][lang][e];
-    }
-  });
+  if (language["id"][lang]) {
+    Object.keys(language["id"][lang]).forEach(e => {
+      if (document.getElementById(e)) {
+        document.getElementById(e).innerHTML = language["id"][lang][e];
+      }
+    });
+  }
 }
 
 //#region Input Range

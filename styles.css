@@ -198,6 +198,9 @@ article .text-title h3 {
 .about-me a:hover {
     color:var(--font-color);
 }
+.about-me #text_id_07, .about-me #text_id_07 ~ a, .about-me #text_id_07 ~ p {
+    display:inline;
+}
 /* End of About me */
 
 /* Projects */

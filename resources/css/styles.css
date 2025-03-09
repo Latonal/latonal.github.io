@@ -1,0 +1,338 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    /* width:calc(100vw - 5px); */
+    min-height:100vh;
+    background-color:var(--background-color);
+    color:var(--font-color);
+    font-family:var(--font-family);
+    font-size: var(--font-size);
+    transition:var(--transition-time);
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x:hidden;
+}
+a {
+    color:var(--second-color);
+    text-decoration: none;
+    transition:var(--transition-time)
+}
+a:hover {
+    color:var(--font-color);
+}
+img {
+    border-radius: var(--border-radius-min);
+}
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
+#settings {
+    display:flex;
+    flex-direction:row;
+    align-items: baseline;
+    gap: 1rem;
+}
+
+#language-select {
+    text-decoration: underline;
+    cursor:pointer;
+}
+
+/*#region theme */
+:root {
+    color-scheme: light dark;
+}
+
+#theme-select input[type="checkbox"] {
+    display:none;
+}
+
+#theme-select label {
+    font-size:1.5rem;
+}
+
+html body:has(#theme-select input[type="checkbox"]:not(:checked)) {
+    color-scheme: only light;
+}
+
+#theme-select input[type="checkbox"]:not(:checked) ~ label:before {
+    content: "🌙";
+}
+
+body:has(#theme-select input[type="checkbox"]:checked) {
+    color-scheme: only dark;
+}
+
+#theme-select input[type="checkbox"]:checked ~ label:before {
+    content: "🌞";
+}
+/*#endregion theme */
+
+/*#region header */
+header {
+    position:fixed;
+    width: 100%;
+    top:0.5rem;
+    padding: 0 1rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index:1000;
+}
+/*#endregion header */
+h1, h2, h3 {
+    margin: 5px 0;
+}
+h1 {
+    font-size: 3.5rem;
+}
+h2 {
+    font-size: 2.5rem;
+    color:var(--second-color);
+}
+h3 {
+    font-size:1.75rem;
+}
+.subtext {
+    font-size: 0.75rem;
+}
+
+section {
+    min-height: 100vh;
+    position:relative;
+    padding: 2rem 0;
+}
+section.small {
+    min-height:auto;
+    padding-bottom:200px;
+}
+
+section#last-section {
+    background:var(--background-gradient-color-invert);
+    padding-bottom: 200px;
+}
+
+/*#region first section */
+section#quick-presentation {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:var(--background-gradient-color);
+}
+
+.picture {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.picture img {
+    max-width: 250px;
+    object-fit: cover;
+    position:absolute;
+    top: -10px;
+}
+
+.min-skills .min-bubble {
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+    margin-bottom: 10px;
+}
+
+.min-skills .min-bubble p {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color:var(--second-color);
+    border-radius: 50%;
+    color:var(--background-color);
+}
+
+.min-more-skills {
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    flex-wrap:wrap;
+    gap: 10px;
+}
+
+.min-more-skills p {
+    border: 2px solid var(--second-color);
+    border-radius:20px;
+    padding: 5px 10px;
+}
+
+.see-next {
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+}
+
+.see-next div {
+    height: 3px;
+    background-color:var(--font-color);
+    margin-top: 10px;
+}
+
+.see-next div:nth-child(1) {
+    width: 200px;
+}
+
+.see-next div:nth-child(2) {
+    width: 150px;
+}
+
+.see-next div:nth-child(3) {
+    width: 100px;
+}
+
+.icon-scroll, .icon-scroll svg {
+    height:4rem;
+}
+/*#endregion first section */
+
+/*#region second section */
+.project-list {
+    display:flex;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap:wrap;
+}
+
+.project {
+    margin-top: 20px;
+}
+.project .subtext {
+    color:var(--light-color);
+}
+
+.project .card {
+    cursor: pointer;
+}
+
+.project .card, .project .card img, .project .card .subtext {
+    transition:var(--transition-time);
+}
+
+.project .card:hover {
+    transform: rotateZ(4deg);
+}
+
+.project .card:hover img {
+    transform: rotateZ(-8deg);
+}
+
+.project .card:hover .subtext {
+    transform: translateX(30px);
+    font-size:1.5rem;
+}
+
+.project img {
+    max-height: 350px;
+    max-width: clamp(200px, 85vw, 580px);
+}
+/*#endregion second section */
+
+/*#region third section */
+
+.carousel-container {
+    width: auto;
+    overflow:hidden;
+    position:relative;
+    margin: 1rem 0;
+}
+
+.carousel-container::before, 
+.carousel-container::after {
+    content: "";
+    position:absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index:2;
+    pointer-events:none;
+}
+
+.carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--background-color), rgba(255, 255, 255, 0));
+}
+
+.carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--background-color), rgba(255, 255, 255, 0));
+}
+
+.carousel-track {
+    display:flex;
+    animation: Scroll 15s linear infinite;
+    width:fit-content;
+}
+
+.carousel-track img {
+    max-height: 50px;
+    width:auto;
+    margin: 0 10px;
+}
+
+.timeline {
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    /* padding: 0 1rem; */
+}
+
+.timeline .sessions {
+    margin-top: 2rem;
+    border-radius: 12px;
+    position:relative;
+    font-size:1.3rem;
+}
+
+.timeline .sessions li {
+    padding-bottom: 3rem;
+    border-left: 1px solid var(--second-color);
+    position:relative;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.timeline .sessions li:last-child {
+    border: 0px;
+    padding-bottom: 0;
+}
+
+.timeline .sessions li:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--second-color);
+    border-radius: 50%;
+    position:absolute;
+    left: -10px;
+    top: 0px;
+    background-color: var(--background-color);
+    box-shadow: 3px 3px 0px var(--background-color);
+}
+
+.timeline .date {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 0.4rem;
+}
+/*#endregion third section */

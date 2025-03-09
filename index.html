@@ -2,174 +2,212 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolas Resmi/Latonal's CV</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about" class="text_class_01">About me</a>
-                </li>
-                <li>
-                    <a href="#my-projects" class="text_class_02">My projects</a>
-                </li>
-            </ul>
-        </nav>
+        <div id="owl"></div>
+        <div id="settings">
+            <div id="language-select" onclick="Translate();">
+                <p id="lang">EN</p>
+            </div>
+            <div id="theme-select">
+                <input type="checkbox" id="theme-checkbox" value="theme-checkbox">
+                <label for="theme-checkbox" class="pointer" aria-label="Theme selector"></label>
+            </div>
+        </div>
     </header>
 
-    </div>
     <main>
-        <aside>
-            <div class="photo">
-                <img src="./content/img/RESMI_Nicolas.jpg">
+        <section id="quick-presentation">
+            <div class="width-delimiter">
+                <h1 class="text-center">Nicolas Resmi</h1>
+                <h2 class="text-center" id="txt1">Développeur full-stack</h2>
+                <div class="picture floating">
+                    <img src="resources/img/RESMI_Nicolas.jpg" alt="Picture of me">
+                </div>
+                <div class="min-skills">
+                    <div class="min-bubble flex-center">
+                        <p>Js</p>
+                        <p>Php</p>
+                        <p>C#</p>
+                    </div>
+                    <span class="line-break"></span>
+                    <div class="min-more-skills">
+                        <p>Git</p>
+                        <p>SQL</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>Typescript</p>
+                        <p>Laravel</p>
+                        <p>Wordpress</p>
+                        <p>NodeJS</p>
+                        <p>React</p>
+                        <p>Architecture logicielle</p>
+                        <p>CI/CD</p>
+                    </div>
+                    <span class="line-break"></span>
+                </div>
+                <span class="line-break"></span>
+                <div class="flex-center icon-scroll floating">
+                    <svg width="60" height="120" viewBox="0 0 50 120" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        stroke="currentColor" stroke-width="5">
+                        <rect x="0" y="20" width="50" height="80" rx="25" ry="25" />
+                        <line x1="25" y1="30" x2="25" y2="60" stroke-linecap="round" />
+                        <path d="M15 50 25 60 35 50" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <!-- <img src="resources/img/mousedown.svg" alt="Icône de souris scrollant vers le bas" class="flex-center"/> -->
+                </div>
             </div>
-            <h1>Nicolas Resmi</h1>
-            <h2 id="text_id_01">Full stack developer</h2>
-            <div class="align">
-                <a href="./content/pdf/CV NICOLAS RESMI fr.pdf" id="text_id_02" target="_blank">My CV (in french)</a>
-            </div>
+        </section>
+        <section class="flex-center">
+            <div class="width-delimiter">
+                <h2 class="text-center">A propos de moi</h2>
+                <span class="line-break"></span>
+                <p id="txt3">Curieux et motivé, j'aime concevoir des applications robustes et scalables en alliant
+                    performance et simplicité. Fort d'une solide expérience dans le développement web, notamment avec
+                    PHP et NodeJS avec des frameworks et librairies comme Laravel et React. J'explore aussi avec
+                    enthousiasme le C#, MAUI et Godot sur mon temps libre.</p>
+                <span class="line-break"></span>
+                <p id="txt4">Au-delà des languages, ce qui me passionne est l'architecture logicielle : penser une
+                    application pour qu'elle évolue sereinement tout en faisant qu'elle reste maintenable et efficace.
+                    Si j'apprécie la puissance des frameworks et des librairies, je valorise aussi la liberté de coder
+                    sans, afin de mieux comprendre les défis et avantages de chaque projet.</p>
+                <span class="line-break"></span>
+                <p id="txt5">Je suis toujours à la recherche de nouveaux challenges, prêt à échanger sur des projets
+                    ambitieux et innovants ! 🚀</p>
+                <span class="line-break"></span>
+                <div class="carousel-container">
+                    <h3 class="text-center" id="txt17">Ils m'ont déjà choisi</h3>
+                    <span class="line-break"></span>
+                    <div class="carousel-track">
+                        <img src="resources/img/asmodee.png" alt="Logo Asmodee">
+                        <img src="resources/img/fdj.webp" alt="Logo Fdj">
+                        <img src="resources/img/mki.svg" alt="Logo Mki">
+                        <img src="resources/img/bpce.png" alt="Logo Natixis">
+                        <img src="resources/img/hestia.png" alt="Logo Hestia">
 
-            <div class="skills">
-                <div class="input-skills-group">
-                    <label for="rangevalue1">HTML5</label>
-                    <input class="input-skills" name="rangevalue1" type="range" value="100" min="0" max="100" oninput="rangevalue1.value=value" onload="rangevalue1.value=value" />
-                    <output id="rangevalue1">100</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue2">CSS3/SASS</label>
-                    <input class="input-skills" name="rangevalue2" type="range" value="100" min="0" max="100" oninput="rangevalue2.value=value" onload="rangevalue2.value=value" />
-                    <output id="rangevalue2">100</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue3">Javascript</label>
-                    <input class="input-skills" name="rangevalue3" type="range" value="95" min="0" max="100" oninput="rangevalue3.value=value" onload="rangevalue3.value=value" />
-                    <output id="rangevalue3">95</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue4">NodeJS</label>
-                    <input class="input-skills" name="rangevalue4" type="range" value="70" min="0" max="100" oninput="rangevalue4.value=value" onload="rangevalue4.value=value" />
-                    <output id="rangevalue4">70</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue5">PHP</label>
-                    <input class="input-skills" name="rangevalue5" type="range" value="95" min="0" max="100" oninput="rangevalue5.value=value" onload="rangevalue5.value=value" />
-                    <output id="rangevalue5">95</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue6">Wordpress</label>
-                    <input class="input-skills" name="rangevalue6" type="range" value="95" min="0" max="100" oninput="rangevalue6.value=value" onload="rangevalue6.value=value" />
-                    <output id="rangevalue6">95</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue7">MySQL</label>
-                    <input class="input-skills" name="rangevalue7" type="range" value="90" min="0" max="100" oninput="rangevalue7.value=value" onload="rangevalue7.value=value" />
-                    <output id="rangevalue7">90</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue8">PostgreSQL</label>
-                    <input class="input-skills" name="rangevalue8" type="range" value="95" min="0" max="100" oninput="rangevalue8.value=value" onload="rangevalue8.value=value" />
-                    <output id="rangevalue8">95</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue9">Git</label>
-                    <input class="input-skills" name="rangevalue9" type="range" value="100" min="0" max="100" oninput="rangevalue9.value=value" onload="rangevalue9.value=value" />
-                    <output id="rangevalue9">100</input>
-                </div>
-                <div class="input-skills-group">
-                    <label for="rangevalue10">Unity/C#</label>
-                    <input class="input-skills" name="rangevalue10" type="range" value="80" min="0" max="100" oninput="rangevalue10.value=value" onload="rangevalue10value=value" />
-                    <output id="rangevalue10">80</input>
-                </div>
-            </div>
-            <p id="text_id_03">A lower percentage does not mean I do not know part of the language, it means I might have more struggles to do some stuff.</p>
-        </aside>
-        <article>
-            <div class="about-me">
-                <div class="text-title">
-                    <div class="text-line"></div>
-                    <h3 class="title-projects text_class_01" id="about-me">About me</h3>
-                </div>
-                <p id="text_id_04">I am a web developer looking to diversify myself and improve about everything that is related to development.</p>
-                <span class="line-break"></span>
-                <p id="text_id_05">Being passionate about video games, I also learned the development in this sector and I wish to be able to work in this field one day.</p>
-                <span class="line-break"></span>
-                <p id="text_id_06">I also graduated from a BAC+5 at the Web School Factory since the end of 2021, and also have an Opquast quality diploma since 2018.</p>
-                <span class="line-break"></span>
-                <p id="text_id_07">If you are looking for a web developer (or an apprentice game developer) contact me at </p> <a href="mailto:nresmi.pro@gmail.com">nresmi.pro@gmail.com</a><p>.</p>
-            </div>
-            <div class="text-title">
-                <div class="text-line"></div>
-                <h3 class="title-projects text_class_02" id="my-projects">My projects</h3>
-            </div>
-            <section class="project">
-                <div class="project-banner">
-                    <img src="./content/img/img1.png" id="project-favs" alt="Code">
-                    <p>Favs</p>
-                </div>
-                <div class="project-info">
-                    <div class="description">
-                        <p id="text_id_08">Skills required: HTML5, CSS3, Javascript, JSON formatting, Code management.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_09">Project done alone with the objective of creating a site allowing the creation of a fully customizable link referencing page.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_10">Still in development, the first version is already available. One of my goals was to achieve a lightweight and optimized code.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_11">It was made in HTML5, CSS3, vanilla Javascript (without external library). Having no server, I used IndexedDB (integrated in Javascript) allowing to have a database saving information in the browser itself.</p>
+                        <img src="resources/img/asmodee.png" alt="Logo Asmodee (dupe)">
+                        <img src="resources/img/fdj.webp" alt="Logo Fdj (dupe)">
+                        <img src="resources/img/mki.svg" alt="Logo Mki (dupe)">
+                        <img src="resources/img/bpce.png" alt="Logo Natixis (dupe)">
+                        <img src="resources/img/hestia.png" alt="Logo Hestia (dupe)">
                     </div>
-                    <a href="Favs/index.html" class="goto" target="_blank">
-                        <div class="sp-ch">
-                            <p>&#57367;</p>
+                </div>
+                <p class="text-center" id="txt6">Contactez-moi :</p>
+                <p class="text-center">
+                    <a class="underline" href="mailto:nresmi.pro@gmail.com">nresmi.pro@gmail.com</a>
+                </p>
+            </div>
+        </section>
+        <section class="flex-center small">
+            <div class="width-partial">
+                <h2 class="text-center" id="txt7">Mes projets</h2>
+                <div class="project-list">
+                    <div class="project">
+                        <h3 class="text-center">Favs</h3>
+                        <dialog>
+                            <button class="close" onclick="CloseModal(this)" aufocus>X</button>
+                            <img src="resources/img/favs.png" alt="Image de l'interface principale de ce projet.">
+                            <span class="line-break"></span>
+                            <h3 class="text-center">Favs</h3>
+                            <span class="line-break"></span>
+                            <p id="txt9">Favs, dans son état actuel, permet de créer des raccourcis rapidement sur votre
+                                navigateur et de personnaliser leur apparence et position. L'objectif final est d'en
+                                faire
+                                une véritable page d'accueil pour n'importe quel navigateur.</p>
+                            <span class="line-break"></span>
+                            <p id="txt10">Favs a été réalisé en HTML, CSS et Javascript natif grâce à l'API IndexedDB me
+                                permettant de stocker de petites quantités de données directement dans le navigateur.
+                            </p>
+                            <span class="line-break"></span>
+                            <p id="txt11">Cela a demandé un travail réfléchi sur la manière de structurer les données et
+                                sur la manière de faire fonctionner un tel projet. Et tout ça, disponible sur <a
+                                    href="https://github.com/Latonal/Favs" target="_blank">GitHub</a>.</p>
+                        </dialog>
+                        <div class="card" onclick="OpenModal(this)">
+                            <div class="flex-center">
+                                <img src="resources/img/favs.png" alt="Image de l'interface principale de ce projet.">
+                            </div>
+                            <p class="subtext text-center" id="txt8">Je ne suis pas designer™</p>
                         </div>
-                    </a>
-                </div>
-            </section>
-            <section class="project">
-                <div class="project-banner">
-                    <img src="./content/img/nacarat.png" id="project-1" alt="Preview du site Nacarat">
-                    <p>Nacarat</p>
-                </div>
-                <div class="project-info">
-                    <img src="./content/img/mki.svg" id="mki" alt="Logo MKI">
-                    <div class="description">
-                        <p id="text_id_12">Skills required: HTML5, CSS3, Javascript, PHP, Wordpress, MySQL, Online deployment, Code management.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_13">Having already had to work with MKI, I was taken on as a freelancer to help develop a new project.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_14">I had to help mainly the dynamization of the site but also helped the integration side.</p>
                     </div>
-                    <a href="https://nacarat.com/" class="goto" target="_blank">
-                        <div class="sp-ch">
-                            <p>&#57367;</p>
+
+                    <div class="project">
+                        <h3 class="text-center txt12">AppLauncherMAUI (nom à changer...)</h3>
+                        <dialog>
+                            <button class="close" onclick="CloseModal(this)" autofocus>X</button>
+                            <img src="resources/img/applaunchermaui.png" alt="Image du code utilisé pour ce projet.">
+                            <span class="line-break"></span>
+                            <h3 class="text-center txt12">AppLauncherMAUI (nom à changer...)</h3>
+                            <span class="line-break"></span>
+                            <p id="txt14">Ce projet a pour but de fournir une GUI claire au téléchargement
+                                d'applications
+                                externes, via des liens Git (par hash) ou autres (par zip).</p>
+                            <span class="line-break"></span>
+                            <p id="txt15">Réalisé avec C#, le framework MAUI et l'architecture MVVM.</p>
+                        </dialog>
+                        <div class="card" onclick="OpenModal(this)">
+                            <div class="flex-center">
+                                <img src="resources/img/applaunchermaui.png"
+                                    alt="Image du code utilisé pour ce projet.">
+                            </div>
+                            <p class="subtext text-center" id="txt13">Pas encore dispo !!!!</p>
                         </div>
-                    </a>
-                </div>
-            </section>
-            <section class="project">
-                <div class="project-banner">
-                    <img src="./content/img/img1.png" id="project-natixis"  alt="Code">
-                    <p>Natixis</p>
-                </div>
-                <div class="project-info">
-                    <img src="./content/img/natixis.png" alt="Logo Natixis">
-                    <div class="description">
-                        <p id="text_id_15">Skills required: HTML5, CSS3, Javascript, PostgreSQL, NodeJS, Online deployment, Code management.</p>
-                        <span class="line-break"></span>
-                        <p id="text_id_16">Collaborative agency with three co-workers, our missions was to create an internal platform to simplify the transmission of sensitive data, format this data to make it more readable, and create a secure platform to reduce the repetitive workload.</p>
                     </div>
                 </div>
-            </section>
-        </article>
+
+            </div>
+        </section>
+        <section class="flex-center" id="last-section">
+            <div class="width-delimiter">
+                <h2 class="text-center" id="txt16">Mon parcours</h2>
+                <span class="line-break"></span>
+
+                <div class="timeline">
+                    <div class="wrapper">
+                        <ul class="sessions">
+                            <li>
+                                <div class="date" id="txt18">2023 - Maintenant : Freelance</div>
+                                <p id="txt19">Période de freelance m'ayant permi de travailler dans plusieurs secteurs et d'être
+                                    constamment confronté à de nouveaux challenges</p>
+                            </li>
+                            <li>
+                                <div class="date">2022 - 2023 : Natixis</div>
+                                <p id="txt20">CDI chez Fortil afin d'intégrer les équipes de Natixis</p>
+                                <p id="txt21">Développeur full-stack sur les technologies PHP, Laravel, NodeJS et React en étant
+                                    aussi Chef de Projet</p>
+                            </li>
+                            <li>
+                                <div class="date" id="txt22">2021 : Diplômé d'un Master</div>
+                                <p id="txt23">Manageur de l'économie numérique spécialité technologies et développement à la Web
+                                    School Factory</p>
+                            </li>
+                            <li>
+                                <div class="date">2019 - 2020 : WMKI</div>
+                                <p id="txt24">Stage suivi d'une période de freelance en tant que développeur front sur les
+                                    technologies PHP et Wordpress</p>
+                            </li>
+                            <li>
+                                <div class="date" id="txt25">2018 : Certification Opquast</div>
+                                <p id="txt26">Maîtrise de la qualité en projet Web</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
     </footer>
-    
-    <script type="text/javascript" src="./content/js/language.js"></script>
-    <script type="text/javascript" src="./script.js"></script>
+
+    <script type="text/javascript" src="resources/js/language.js"></script>
+    <script type="text/javascript" src="resources/js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,19 @@
+:root {
+    --transition-time: 0.4s;
+    --font-family:Roboto-Regular,sans-serif;
+    --font-size: 1.3rem;
+
+    --light-color:rgba(212, 212, 212, 1);
+    --dark-color:rgba(53, 53, 53, 1);
+    --soft-blue: rgba(113, 115, 233);
+    --dark-blue: rgba(34, 58, 165);
+
+    --background-color:light-dark(var(--light-color), var(--dark-color));
+    --background-gradient-color: linear-gradient(0deg, var(--background-color) 80%, var(--second-color) 100%);
+    --background-gradient-color-invert: linear-gradient(0deg, var(--second-color) 0%, var(--background-color) 10%);
+    --font-color:light-dark(var(--dark-color), var(--light-color));
+    --second-color:light-dark(var(--dark-blue), var(--soft-blue));
+    --second-color-alt:light-dark(var(--soft-blue), var(--dark-blue));
+
+    --border-radius-min: 5px;
+}
